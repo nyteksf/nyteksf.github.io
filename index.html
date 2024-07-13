@@ -4,12 +4,13 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Joe Coviello: Dev</title>
-        <link rel="stylesheet" href="./styles.css" type="text/css" />
+        <link rel="stylesheet" href="./css/styles.css" type="text/css" />
         <link rel="icon" href="./assets/jclogo3.png" type="image/png" />
         <script
             src="https://kit.fontawesome.com/f42fa95770.js"
             crossorigin="anonymous"
         ></script>
+        <script src="./js/main.js" defer></script>
     </head>
     <body>
         <section id="about-me">
@@ -203,255 +204,317 @@
                         Here are some of my
                         <span class="text--purple">projects</span>
                     </h1>
-                    <ul class="project__list">
-                        <li class="project">
-                            <div class="project__wrapper">
-                                <img
-                                    src="./assets/wikipediaviewer.jpg"
-                                    class="project__img"
-                                    alt="Wikipedia Viewer Project"
-                                />
-                            </div>
-                            <div class="project__description">
-                                <h3 class="project__description--title">
-                                    Wikipedia Viewer Project
-                                </h3>
-                                <h4 class="project__description--sub-title">
-                                    HTML, CSS, JavaScript
-                                </h4>
-                                <p class="project__description--para">
-                                    This is a fun, simple project which uses an API in order to make a call to Wikipedia with a custom callback that displays any received data in the DOM while also providing input validation.
-                                </p>
-                                <div class="project__description--links">
-                                    <a
-                                        href="https://github.com/nyteksf/wikipedia-viewer/"
-                                        target="_blank"
-                                        class="project__description--link"
-                                    >
-                                        <i
-                                            class="project__description--link fa-brands fa-square-github"
-                                        ></i>
-                                    </a>
-                                    <a href="https://nyteksf.github.io/wikipedia-viewer/">
-                                        <i
-                                            class="project__description--link fa-solid fa-link"
-                                        ></i>
-                                    </a>
+                    <div id="page1" class="project-content-page active">
+                        <ul class="project__list">
+                            <li class="project">
+                                <div class="project__wrapper">
+                                    <img
+                                        src="./assets/wikipediaviewer.jpg"
+                                        class="project__img"
+                                        loading="lazy"
+                                        alt="Wikipedia Viewer Project"
+                                    />
                                 </div>
-                            </div>
-                        </li>
-                        <li class="project">
-                            <div class="project__wrapper">
-                                <img
-                                    src="./assets/telemachusgvtsvcs.jpg"
-                                    class="project__img"
-                                    alt="Telemachus Government Services Website Project"
-                                />
-                            </div>
-                            <div class="project__description">
-                                <h3 class="project__description--title">
-                                    Personal WordPress Project
-                                </h3>
-                                <h4 class="project__description--sub-title">
-                                    HTML, CSS, JavaScript, WordPress
-                                </h4>
-                                <p class="project__description--para">
-                                    This is a customized Wordpress website made for a future business project of my own. I'd also found and edited mostly all images in Photoshop before at times applying further effects with CSS.
-                                </p>
-                                <div class="project__description--links">
-                                    <a
-                                        href="https://www.telemachusinternational.com/"
-                                        target="_blank"
-                                        class="project__description--link"
-                                    >
-                                        <i
-                                            class="project__description--link fa-brands fa-square-github"
-                                        ></i>
-                                    </a>
-                                    <a href="#">
-                                        <i
-                                            class="project__description--link fa-solid fa-link"
-                                        ></i>
-                                    </a>
+                                <div class="project__description">
+                                    <h3 class="project__description--title">
+                                        Wikipedia Viewer Project
+                                    </h3>
+                                    <h4 class="project__description--sub-title">
+                                        HTML, CSS, JavaScript
+                                    </h4>
+                                    <p class="project__description--para">
+                                        This is a fun, simple project which uses
+                                        an API in order to make a call to
+                                        Wikipedia with a custom callback that
+                                        displays any received data in the DOM
+                                        while also providing input validation.
+                                    </p>
+                                    <div class="project__description--links">
+                                        <a
+                                            href="https://github.com/nyteksf/wikipedia-viewer/"
+                                            target="_blank"
+                                            class="project__description--link"
+                                        >
+                                            <i
+                                                class="project__description--link fa-brands fa-square-github"
+                                            ></i>
+                                        </a>
+                                        <a
+                                            href="https://nyteksf.github.io/wikipedia-viewer/"
+                                        >
+                                            <i
+                                                class="project__description--link fa-solid fa-link"
+                                            ></i>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="project">
-                            <div class="project__wrapper">
-                                <img
-                                    src="./assets/HCAbashInstaller.jpg"
-                                    class="project__img"
-                                    alt="Bash Installer Project"
-                                />
-                            </div>
-                            <div class="project__description">
-                                <h3 class="project__description--title">
-                                    Bash Install Script
-                                </h3>
-                                <h4 class="project__description--sub-title">
-                                    Bash
-                                </h4>
-                                <p class="project__description--para">
-                                    A custom install script written in bash; made while attending the Hacker: Coding Academy bootcamp. It was designed by myself to standardize a uniform coding environment for me and any fellow new students using Linux or OSX. My script automagically downloads, installs, and even interactively configures certain useful packages, including git.
-                                </p>
-                                <div class="project__description--links">
-                                    <a
-                                        href="https://github.com/nyteksf/H-CA-Script-Installer/"
-                                        target="_blank"
-                                        class="project__description--link"
-                                    >
-                                        <i
-                                            class="project__description--link fa-brands fa-square-github"
-                                        ></i>
-                                    </a>
+                            </li>
+                            <li class="project">
+                                <div class="project__wrapper">
+                                    <img
+                                        src="./assets/telemachusgvtsvcs.jpg"
+                                        class="project__img"
+                                        loading="lazy"
+                                        alt="Telemachus Government Services Website Project"
+                                    />
                                 </div>
-                            </div>
-                        </li>
-                        <li class="project">
-                            <div class="project__wrapper">
-                                <img
-                                    src="./assets/jsdommanipulator.jpg"
-                                    class="project__img"
-                                    alt="JavaScript DOM Manipulation Project"
-                                />
-                            </div>
-                            <div class="project__description">
-                                <h3 class="project__description--title">
-                                    JavaScript DOM Manipulator
-                                </h3>
-                                <h4 class="project__description--sub-title">
-                                    HTML, CSS, JavaScript
-                                </h4>
-                                <p class="project__description--para">
-                                    This was a project demonstrating JavaScript powered DOM manipulation. It uses jQuery, jQuery UI (autocomplete), TinyColor.js, Bootstrap and NTC to choose random or selected colors as desired. It also stores the last colors chosen as buttons allowing them be recalled.
-                                </p>
-                                <div class="project__description--links">
-                                    <a
-                                        href="https://www.github.com/nyteksf/js-dom-manipulator/"
-                                        target="_blank"
-                                        class="project__description--link"
-                                    >
-                                        <i
-                                            class="project__description--link fa-brands fa-square-github"
-                                        ></i>
-                                    </a>
-                                    <a href="https://nyteksf.github.io/js-dom-manipulator/">
-                                        <i
-                                            class="project__description--link fa-solid fa-link"
-                                        ></i>
-                                    </a>
+                                <div class="project__description">
+                                    <h3 class="project__description--title">
+                                        Personal WordPress Project
+                                    </h3>
+                                    <h4 class="project__description--sub-title">
+                                        HTML, CSS, JavaScript, WordPress
+                                    </h4>
+                                    <p class="project__description--para">
+                                        This is a customized Wordpress website
+                                        made for a future business project of my
+                                        own. I'd also found and edited mostly
+                                        all images in Photoshop before at times
+                                        applying further effects with CSS.
+                                    </p>
+                                    <div class="project__description--links">
+                                        <a
+                                            href="https://www.telemachusinternational.com/"
+                                            target="_blank"
+                                            class="project__description--link"
+                                        >
+                                            <i
+                                                class="project__description--link fa-brands fa-square-github"
+                                            ></i>
+                                        </a>
+                                        <a href="#">
+                                            <i
+                                                class="project__description--link fa-solid fa-link"
+                                            ></i>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="project">
-                            <div class="project__wrapper">
-                                <img
-                                    src="./assets/solarcalculatorproj.jpg"
-                                    class="project__img"
-                                    alt="Solar Calculator Simulator"
-                                />
-                            </div>
-                            <div class="project__description">
-                                <h3 class="project__description--title">
-                                    Solar Calculator Simulator
-                                </h3>
-                                <h4 class="project__description--sub-title">
-                                    HTML, CSS, JavaScript
-                                </h4>
-                                <p class="project__description--para">
-                                    This project simulates using a solar calculator. The functions on it are all working. Please see instructions at the bottom. Also, the light switch works too, in context.
-                                </p>
-                                <div class="project__description--links">
-                                    <a
-                                        href="https://github.com/nyteksf/solar-calculator/"
-                                        target="_blank"
-                                        class="project__description--link"
-                                    >
-                                        <i
-                                            class="project__description--link fa-brands fa-square-github"
-                                        ></i>
-                                    </a>
-                                    <a href="https://nyteksf.github.io/solar-calculator/">
-                                        <i
-                                            class="project__description--link fa-solid fa-link"
-                                        ></i>
-                                    </a>
+                            </li>
+                            <li class="project">
+                                <div class="project__wrapper">
+                                    <img
+                                        src="./assets/HCAbashInstaller.jpg"
+                                        class="project__img"
+                                        loading="lazy"
+                                        alt="Bash Installer Project"
+                                    />
                                 </div>
-                            </div>
-                        </li>
-                        <li class="project">
-                            <div class="project__wrapper">
-                                <img
-                                    src="./assets/livelinksapp.jpg"
-                                    class="project__img"
-                                    alt="LiveLinks Project"
-                                />
-                            </div>
-                            <div class="project__description">
-                                <h3 class="project__description--title">
-                                    LiveLinks Project
-                                </h3>
-                                <h4 class="project__description--sub-title">
-                                    HTML, CSS, JavaScript, Firebase (NoSQL)
-                                </h4>
-                                <p class="project__description--para">
-                                    This was a simple project from the Hack Reactor: Fulcrum remote, advanced JavaScript course. Auth0 is used to register and/or login in order to then be able to post and like shared links from fellow users.
-                                </p>
-                                <div class="project__description--links">
-                                    <a
-                                        href="https://www.github.com/nyteksf/LiveLinksApp/"
-                                        target="_blank"
-                                        class="project__description--link"
-                                    >
-                                        <i
-                                            class="project__description--link fa-brands fa-square-github"
-                                        ></i>
-                                    </a>
-                                    <a href="https://nyteksf.github.io/LiveLinksApp/">
-                                        <i
-                                            class="project__description--link fa-solid fa-link"
-                                        ></i>
-                                    </a>
+                                <div class="project__description">
+                                    <h3 class="project__description--title">
+                                        Bash Install Script
+                                    </h3>
+                                    <h4 class="project__description--sub-title">
+                                        Bash
+                                    </h4>
+                                    <p class="project__description--para">
+                                        A custom install script written in bash;
+                                        made while attending the Hacker: Coding
+                                        Academy bootcamp. It was designed by
+                                        myself to standardize a uniform coding
+                                        environment for me and any fellow new
+                                        students using Linux or OSX. My script
+                                        automagically downloads, installs, and
+                                        even interactively configures certain
+                                        useful packages, including git.
+                                    </p>
+                                    <div class="project__description--links">
+                                        <a
+                                            href="https://github.com/nyteksf/H-CA-Script-Installer/"
+                                            target="_blank"
+                                            class="project__description--link"
+                                        >
+                                            <i
+                                                class="project__description--link fa-brands fa-square-github"
+                                            ></i>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="project">
-                            <div class="project__wrapper">
-                                <img
-                                    src="./assets/pseudotwitterproj.jpg"
-                                    class="project__img"
-                                    alt="PseudoTwitter Project"
-                                />
-                            </div>
-                            <div class="project__description">
-                                <h3 class="project__description--title">
-                                    "PseudoTwitter" Project
-                                </h3>
-                                <h4 class="project__description--sub-title">
-                                    HTML, CSS, JS
-                                </h4>
-                                <p class="project__description--para">
-                                    Despite the name "PseudoTwitter", this project was not meant to showcase a polished UI. Instead, the purpose was to display dynamic element generation alongside DOM manipulation using a quick and dirty UI to provide context accordingly. All tweets except for user content are randomly generated from a list of options.
-                                </p>
-                                <div class="project__description--links">
-                                    <a
-                                        href="https://www.github.com/nyteksf/PseudoTwitter/"
-                                        target="_blank"
-                                        class="project__description--link"
-                                    >
-                                        <i
-                                            class="project__description--link fa-brands fa-square-github"
-                                        ></i>
-                                    </a>
-                                    <a href="https://nyteksf.github.io/PseudoTwitter/">
-                                        <i
-                                            class="project__description--link fa-solid fa-link"
-                                        ></i>
-                                    </a>
+                            </li>
+                            <li class="project">
+                                <div class="project__wrapper">
+                                    <img
+                                        src="./assets/jsdommanipulator.jpg"
+                                        class="project__img"
+                                        loading="lazy"
+                                        alt="JavaScript DOM Manipulation Project"
+                                    />
                                 </div>
-                            </div>
-                        </li>
-                        <!--  BOILERPLATE FOR NEW PROJECTS BELOW:
+                                <div class="project__description">
+                                    <h3 class="project__description--title">
+                                        JavaScript DOM Manipulator
+                                    </h3>
+                                    <h4 class="project__description--sub-title">
+                                        HTML, CSS, JavaScript
+                                    </h4>
+                                    <p class="project__description--para">
+                                        This was a project demonstrating
+                                        JavaScript powered DOM manipulation. It
+                                        uses jQuery, jQuery UI (autocomplete),
+                                        TinyColor.js, Bootstrap and NTC to
+                                        choose random or selected colors as
+                                        desired. It also stores the last colors
+                                        chosen as buttons allowing them be
+                                        recalled.
+                                    </p>
+                                    <div class="project__description--links">
+                                        <a
+                                            href="https://www.github.com/nyteksf/js-dom-manipulator/"
+                                            target="_blank"
+                                            class="project__description--link"
+                                        >
+                                            <i
+                                                class="project__description--link fa-brands fa-square-github"
+                                            ></i>
+                                        </a>
+                                        <a
+                                            href="https://nyteksf.github.io/js-dom-manipulator/"
+                                        >
+                                            <i
+                                                class="project__description--link fa-solid fa-link"
+                                            ></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="project">
+                                <div class="project__wrapper">
+                                    <img
+                                        src="./assets/solarcalculatorproj.jpg"
+                                        class="project__img"
+                                        loading="lazy"
+                                        alt="Solar Calculator Simulator"
+                                    />
+                                </div>
+                                <div class="project__description">
+                                    <h3 class="project__description--title">
+                                        Solar Calculator Simulator
+                                    </h3>
+                                    <h4 class="project__description--sub-title">
+                                        HTML, CSS, JavaScript
+                                    </h4>
+                                    <p class="project__description--para">
+                                        This project simulates using a solar
+                                        calculator. The functions on it are all
+                                        working. Please see instructions at the
+                                        bottom. Also, the light switch works
+                                        too, in context.
+                                    </p>
+                                    <div class="project__description--links">
+                                        <a
+                                            href="https://github.com/nyteksf/solar-calculator/"
+                                            target="_blank"
+                                            class="project__description--link"
+                                        >
+                                            <i
+                                                class="project__description--link fa-brands fa-square-github"
+                                            ></i>
+                                        </a>
+                                        <a
+                                            href="https://nyteksf.github.io/solar-calculator/"
+                                        >
+                                            <i
+                                                class="project__description--link fa-solid fa-link"
+                                            ></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div id="page2" class="project-content-page">
+                        <ul class="project__list">
+                            <li class="project">
+                                <div class="project__wrapper">
+                                    <img
+                                        src="./assets/livelinksapp.jpg"
+                                        class="project__img"
+                                        loading="lazy"
+                                        alt="LiveLinks Project"
+                                    />
+                                </div>
+                                <div class="project__description">
+                                    <h3 class="project__description--title">
+                                        LiveLinks Project
+                                    </h3>
+                                    <h4 class="project__description--sub-title">
+                                        HTML, CSS, JavaScript, Firebase (NoSQL)
+                                    </h4>
+                                    <p class="project__description--para">
+                                        This was a simple project from the Hack
+                                        Reactor: Fulcrum remote, advanced
+                                        JavaScript course. Auth0 is used to
+                                        register and/or login in order to then
+                                        be able to post and like shared links
+                                        from fellow users.
+                                    </p>
+                                    <div class="project__description--links">
+                                        <a
+                                            href="https://www.github.com/nyteksf/LiveLinksApp/"
+                                            target="_blank"
+                                            class="project__description--link"
+                                        >
+                                            <i
+                                                class="project__description--link fa-brands fa-square-github"
+                                            ></i>
+                                        </a>
+                                        <a
+                                            href="https://nyteksf.github.io/LiveLinksApp/"
+                                        >
+                                            <i
+                                                class="project__description--link fa-solid fa-link"
+                                            ></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="project">
+                                <div class="project__wrapper">
+                                    <img
+                                        src="./assets/pseudotwitterproj.jpg"
+                                        class="project__img"
+                                        loading="lazy"
+                                        alt="PseudoTwitter Project"
+                                    />
+                                </div>
+                                <div class="project__description">
+                                    <h3 class="project__description--title">
+                                        "PseudoTwitter" Project
+                                    </h3>
+                                    <h4 class="project__description--sub-title">
+                                        HTML, CSS, JS
+                                    </h4>
+                                    <p class="project__description--para">
+                                        Despite the name "PseudoTwitter", this
+                                        project was not meant to showcase a
+                                        polished UI. Instead, the purpose was to
+                                        display dynamic element generation
+                                        alongside DOM manipulation using a quick
+                                        and dirty UI to provide context
+                                        accordingly. All tweets except for user
+                                        content are randomly generated from a
+                                        list of options.
+                                    </p>
+                                    <div class="project__description--links">
+                                        <a
+                                            href="https://www.github.com/nyteksf/PseudoTwitter/"
+                                            target="_blank"
+                                            class="project__description--link"
+                                        >
+                                            <i
+                                                class="project__description--link fa-brands fa-square-github"
+                                            ></i>
+                                        </a>
+                                        <a
+                                            href="https://nyteksf.github.io/PseudoTwitter/"
+                                        >
+                                            <i
+                                                class="project__description--link fa-solid fa-link"
+                                            ></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--  BOILERPLATE FOR NEW PROJECTS BELOW:
                         <li class="project">
                             <div class="project__wrapper">
                                 <img
@@ -498,8 +561,33 @@
                             </div>
                         </li>
                     -->
-
-                    </ul>
+                            <!-- Content divs to be shown/hidden -->
+                        </ul>
+                    </div>
+                    <nav class="pagination__nav">
+                        <ul class="pagination-menu">
+                            <li>
+                                <a
+                                    href=""
+                                    class="pagination-menu__item active-page"
+                                    page="1"
+                                    >1</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href=""
+                                    class="pagination-menu__item"
+                                    page="2"
+                                    >2</a
+                                >
+                            </li>
+                            <!--
+                          <li><a href="" class="pagination-menu__item" page="3">3</a></li>
+                          <li><a href="" class="pagination-menu__item" page="4">4</a></li>
+                          -->
+                        </ul>
+                    </nav>
                 </div>
             </div>
         </section>
