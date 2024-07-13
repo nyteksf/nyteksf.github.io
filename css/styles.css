@@ -113,7 +113,7 @@ nav {
 }
 
 .nav__link--anchor-primary:hover {
-    background-color: #5d3eff;
+    background-color: #5011cc;    
     transition: all 300ms ease;
 }
 
@@ -238,15 +238,15 @@ nav {
 }
 
 .about-me__link:hover {
-    color: #6030b1; /* Change the color to highlight the icon */
+    color: #6030b1;
     color: darkslategray;
-    transition: color 300ms ease; /* Add a transition for smooth effect */
+    transition: color 300ms ease;
 }
 
 .about-me__link {
     font-size: 20px;
     text-decoration: none;
-    padding-right: 16px; /* CHANGED FROM padding: 0 16px; */
+    padding-right: 16px; 
 }
 
 @keyframes fade-up {
