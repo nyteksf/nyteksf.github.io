@@ -2,10 +2,10 @@
  * PAGINATION FUNCTIONALITY PROPER
  */
 
+// Get all pagination links in a nodelist
+let pageLinks = document.querySelectorAll('.pagination-menu__item');
+
 document.addEventListener('DOMContentLoaded', function() {
-    // Get all pagination links in nodelist
-    let pageLinks = document.querySelectorAll('.pagination-menu__item');
-  
     // Add click event listener to each link
     pageLinks.forEach(function(link) {
       link.addEventListener('click', function(e) {
@@ -45,10 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
   $(".prev").click(function(e) {
     e.preventDefault();
 
-    let pageLinkIndex = document.querySelectorAll('.pagination-menu__item');
-
     if ($(".active-page").parent().prev().children()[0].className === "prev") {
-      $(pageLinkIndex)[pageLinkIndex.length - 1].click();
+      $(pageLinks)[pageLinks.length - 1].click();
     } else {
       $(".active-page").parent().prev().children()[0].click();
     }
@@ -57,10 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
   $(".next").click(function(e) {
     e.preventDefault();
 
-    let pageList = document.querySelectorAll('.pagination-menu__item');
-
     if ($(".active-page").parent().next().children()[0].className === "next") {
-      $(pageList)[0].click();
+      $(pageLinks)[0].click();
     } else {
       $(".active-page").parent().next().children()[0].click();
     }
