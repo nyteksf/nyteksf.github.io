@@ -549,6 +549,8 @@ footer {
     font-size: 20px;
   }
 
+  .prev:hover,
+  .next:hover,
   .pagination-menu__item:hover:not(.active-page) {
     background-color: rgba(0, 0, 0, 0.16);
   }
