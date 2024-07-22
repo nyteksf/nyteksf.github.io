@@ -517,6 +517,8 @@ footer {
     gap: 2px;
   }
   
+  .prev,
+  .next,
   .pagination-menu__item {
     display: flex;
     justify-content: center;
@@ -540,6 +542,15 @@ footer {
   .project-content-page.active {
     display: block; 
     width: 100%;
+  }
+
+  .prev, 
+  .next {
+    font-size: 20px;
+  }
+
+  .pagination-menu__item:hover:not(.active-page) {
+    background-color: rgba(0, 0, 0, 0.16);
   }
 
 /* SMALL PHONES, TABLETS & LARGE SMARTPHONES */
