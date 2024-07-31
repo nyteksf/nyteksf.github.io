@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Joe Coviello: Web Dev</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="icon" href="./assets/jclogo3-bw.png" type="image/jpeg" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+        <script src="index.js" defer></script>
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+        </script>
+        <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "M5JGTBwzcn6wIf6a7",
+            });
+        })();
+        </script>
+        <script
+            src="https://kit.fontawesome.com/f42fa95770.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <section id="landing-page" onmousemove="moveBackgroundImgs(event)">
+            <nav>
+                <figure>
+                    <img
+                        id="personal-logo"
+                        src="./assets/jclogo3-bw.png"
+                        alt="Navbar logo"
+                    />
+                </figure>
+                <ul class="nav__link--list">
+                    <li class="nav__link" onclick="toggleModal()">
+                        <a
+                            href="#"
+                            class="nav__link--anchor link__hover-effect link__hover-effect--black link__hover-effect--white"
+                            >About</a
+                        >
+                    </li>
+                    <li class="nav__link">
+                        <a 
+                            href="#projects"
+                            class="nav__link--anchor link__hover-effect link__hover-effect--black link__hover-effect--white"
+                            >Projects</a
+                        >
+                    </li>
+                    <li class="nav__link" onclick="toggleModal()">
+                        <a
+                            href="#"
+                            class="nav__link--anchor link__hover-effect link__hover-effect--black link__hover-effect--white"
+                            >Contact</a
+                        >
+                    </li>
+                    <li class="nav__link click">
+                        <a
+                            href="#"
+                            class="nav__link--anchor link__hover-effect link__hover-effect--black link__hover-effect--white"
+                            ><i class="fa-solid fa-circle-half-stroke" onclick="toggleContrast()"></i
+                        ></a>
+                    </li>
+                </ul>
+            </nav>
+            <header class="header">
+                <div class="header__content">
+                    <h1 class="title">Hey</h1>
+                    <h1 class="title orange">I'm Joe</h1>
+                    <p class="header__para">
+                        I'm a
+                        <strong class="orange"
+                            >Full-Stack Web Developer</strong
+                        >
+                        with a strong passion for building web applications with
+                        great user experiences.
+                        <br />
+                        Here's a bit more
+                        <strong class="orange click" onclick="toggleModal()">about me.</strong>
+                    </p>
+                    <div class="social__list">
+                        <a
+                            href="https://www.linkedin.com/in/joe-coviello-63a63768/"
+                            target="_blank"
+                            class="social__link click"
+                        >
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a
+                            href="https://github.com/nyteksf/"
+                            target="_blank"
+                            class="social__link click"
+                        >
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a
+                            href="./assets/Joe Coviello - Resume - JR Web Dev.pdf"
+                            target="_blank"
+                            class="social__link click"
+                        >
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+            <a href="#">
+                <button class="mail__btn click" onclick="toggleModal()">
+                    <i class="fa-solid fa-envelope"></i>
+                </button>
+            </a>
+            <a href="#projects" class="scroll">
+                <div class="scroll__icon click"></div>
+            </a>
+            <div class="modal">
+                <div class="modal__half modal__about">
+                    <h3 class="modal__title modal__title--about">
+                        Here's a bit about me.
+                    </h3>
+                    <h4 class="modal__sub-title modal__sub-title--about">
+                        Full-Stack Web Developer
+                    </h4>
+                    <p class="modal__para">
+                        I'm a 39-year-old <strong class="orange">Fullstack Web Developer</strong> with a strong passion for developing websites with great <strong class="orange">user experiences</strong>.
+                        <br/>
+                        Currently, I'm honing my skills by tackling difficult engineering challenges while learning from a team of some of the industry's most <strong class="orange">talented</strong> and <strong class="orange">experienced</strong> software engineers. I am passionate about continuous learning and leveraging my skills to contribute to innovative and impactful projects.
+                    </p>
+                    <div class="modal__languages">
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="./assets/HTML5_Badge.png" alt="Language Icon" />
+                            <span class="language__name">HTML</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="./assets/css-badge.png" alt="Language Icon" />
+                            <span class="language__name">CSS</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="./assets/javascript-badge.png" alt="Language Icon" />
+                            <span class="language__name">JavaScript</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="./assets/typescript-badge.png" alt="Language Icon" />
+                            <span class="language__name">TypeScript</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="./assets/Node.js_logo.svg.png" alt="Language Icon" />
+                            <span class="language__name">Node.JS</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="./assets/react-badge.png" alt="Language Icon" />
+                            <span class="language__name">React</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="./assets/jQuery-badge.png" alt="Language Icon" />
+                            <span class="language__name">jQuery</span>
+                        </figure>
+                        <figure class="modal__language">
+                            <img class="modal__language--img" src="./assets/mysql-badge.webp" alt="Language Icon" />
+                            <span class="language__name">MySQL</span>
+                        </figure>
+                    </div>
+                </div>
+                <div class="modal__half modal__contact">
+                    <i class="fa-solid fa-xmark modal__exit click" onclick="toggleModal()"></i>
+                    <h3 class="modal__title modal__title--contact">
+                        Let's have a chat!
+                    </h3>
+                    <h4 class="modal__sub-title modal__sub-title--contact">
+                        I'm currently open to new opportunities.
+                    </h4>
+                    <form id="contact__form" onsubmit="contact(event)">
+                        <div class="form__item">
+                            <label class="form__item--label"><span class="orange required-field">*</span> Name</label>
+                            <input type="text" name="user_name" class="input" required></input>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__item--label"><span class="orange required-field">*</span> E-mail</label>
+                            <input type="email" name="user_email" class="input" required></input>
+                        </div>
+                        <div class="form__item">
+                            <label class="form__item--label"><span class="orange required-field">*</span> Message</label>
+                            <textarea type="text" name="message" class="input" required></textarea>
+                        </div>
+                        <button id="contact__submit" class="form__submit">
+                            Send it my way
+                        </button>
+                    </form>
+                    <div class="modal__overlay modal__overlay--loading">
+                        <i class="fa-solid fa-spinner"></i>
+                    </div>
+                    <div class="modal__overlay modal__overlay--success">
+                        Thanks for the message! Looking forward to speaking with you soon.
+                    </div>
+                </div>
+            </div>
+            <img src="./assets/semi circle.svg" class="shape shape--0">
+            <img src="./assets/circle.svg" class="shape shape--1">
+            <img src="./assets/squiggly.svg" class="shape shape--2">
+            <img src="./assets/circle.svg" class="shape shape--3">
+            <img src="./assets/triangle.svg" class="shape shape--4">
+            <img src="./assets/circle.svg" class="shape shape--5">
+            <img src="./assets/squiggly.svg" class="shape shape--6">
+            <img src="./assets/circle.svg" class="shape shape--7">
+            <img src="./assets/semi circle.svg" class="shape shape--8">
+        </section>
+        <section id="projects">
+            <div class="container">
+                <div class="row">
+                    <h1 class="section__title">
+                        Here are some of my <span class="orange">projects</span>
+                    </h1>
+                    <ul class="project__list">
+                        <div id="page1" class="project-content-page active">
+                            <li class="project">
+                                <div class="project__wrapper">
+                                    <img
+                                        src="./assets/library-proj-layout.jpg"
+                                        loading="lazy"
+                                        alt="Project image"
+                                        class="project__img"
+                                    />
+                                    <div class="project__wrapper--bg"></div>
+                                    <div class="project__description">
+                                        <h3 class="project__description--title">
+                                            "Library" Template
+                                        </h3>
+                                        <h4
+                                            class="project__description--sub-title"
+                                        >
+                                            HTML, CSS, JavaScript
+                                        </h4>
+                                        <p class="project__description--para">
+                                            This project was intended to be a fully responsive e-commerce website template and demonstration. The second page- "books.html"- features a mock API call and sorting function.
+                                        </p>
+                                        <div
+                                            class="project__description--links"
+                                        >
+                                            <a
+                                                href="https://github.com/nyteksf/library-e-commerce-js"
+                                                class="project__description--link"
+                                            >
+                                                <i
+                                                    class="fa-brands fa-github"
+                                                ></i>
+                                            </a>
+                                            <a
+                                                href="https://nyteksf.github.io/library-e-commerce-js/"
+                                                class="project__description--link"
+                                            >
+                                                <i class="fa-solid fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="project">
+                                <div class="project__wrapper">
+                                    <img
+                                        src="./assets/wikipediaviewer.jpg"
+                                        loading="lazy"
+                                        alt="Project image"
+                                        class="project__img"
+                                    />
+                                    <div class="project__wrapper--bg"></div>
+                                    <div class="project__description">
+                                        <h3 class="project__description--title">
+                                            Wikipedia Viewer Project
+                                        </h3>
+                                        <h4
+                                            class="project__description--sub-title"
+                                        >
+                                            HTML, CSS, JavaScript
+                                        </h4>
+                                        <p class="project__description--para">
+                                            This is a fun, simple project which utilizes a Wikipedia API in order to make a call to Wikipedia using a custom callback that displays any received data therefrom in the DOM within dynamically generated elements, while also providing input validation for the user.
+                                        </p>
+                                        <div
+                                            class="project__description--links"
+                                        >
+                                            <a
+                                                href="https://github.com/nyteksf/wikipedia-viewer/"
+                                                target="_blank"
+                                                class="project__description--link"
+                                            >
+                                                <i
+                                                    class="fa-brands fa-github"
+                                                ></i>
+                                            </a>
+                                            <a
+                                                href="https://nyteksf.github.io/wikipedia-viewer/"
+                                                target="_blank"
+                                                class="project__description--link"
+                                            >
+                                                <i class="fa-solid fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="project">
+                                <div class="project__wrapper">
+                                    <img
+                                        src="./assets/solarcalclayout.jpg""
+                                        loading="lazy"
+                                        alt="Project image"
+                                        class="project__img"
+                                    />
+                                    <div class="project__wrapper--bg"></div>
+                                    <div class="project__description">
+                                        <h3 class="project__description--title">
+                                            Solar Calculator Sim
+                                        </h3>
+                                        <h4
+                                            class="project__description--sub-title"
+                                        >
+                                            HTML, CSS, JavaScript
+                                        </h4>
+                                        <p class="project__description--para">
+                                            A solar calculator sim based on a real, functioning model thereof. Even the light switch works.
+                                        </p>
+                                        <div
+                                            class="project__description--links"
+                                        >
+                                            <a
+                                                href="https://github.com/nyteksf/solar-calculator-sim/"
+                                                target="_blank"
+                                                class="project__description--link"
+                                            >
+                                                <i
+                                                    class="fa-brands fa-github"
+                                                ></i>
+                                            </a>
+                                            <a
+                                                href="https://nyteksf.github.io/solar-calculator-sim/"
+                                                target="_blank"
+                                                class="project__description--link"
+                                            >
+                                                <i class="fa-solid fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="project">
+                                <div class="project__wrapper">
+                                    <img
+                                        src="./assets/telemachus-layout-4.jpg"
+                                        loading="lazy"
+                                        alt="Project image"
+                                        class="project__img"
+                                    />
+                                    <div class="project__wrapper--bg"></div>
+                                    <div class="project__description">
+                                        <h3 class="project__description--title">
+                                            Telemachus Gov't Svcs.
+                                        </h3>
+                                        <h4
+                                            class="project__description--sub-title"
+                                        >
+                                            WordPress, HTML, CSS, JavaScript
+                                        </h4>
+                                        <p class="project__description--para">
+                                            This is a personal project for a future business venture of my own. It's a customized WordPress website where I generated the logo, found and photoshopped all images, and wrote the corresponding copy.
+                                        </p>
+                                        <div
+                                            class="project__description--links"
+                                        >
+                                            <a
+                                                href="http://www.telemachusinternational.com/"
+                                                target="_blank"
+                                                class="project__description--link"
+                                            >
+                                                <i class="fa-solid fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="project">
+                                <div class="project__wrapper">
+                                    <img
+                                        src="./assets/HCAbashInstaller.jpg"
+                                        loading="lazy"
+                                        alt="Project image"
+                                        class="project__img"
+                                    />
+                                    <div class="project__wrapper--bg"></div>
+                                    <div class="project__description">
+                                        <h3 class="project__description--title">
+                                            Bash Install Script
+                                        </h3>
+                                        <h4
+                                            class="project__description--sub-title"
+                                        >
+                                            Bash
+                                        </h4>
+                                        <p class="project__description--para">
+                                            A custom install script written in bash; made while attending the Hacker: Coding Academy bootcamp. It was designed by myself to standardize a uniform coding environment for me and any fellow new students using Linux or OSX. My script automagically downloads, installs, and even interactively configures certain useful packages, including git.
+                                        </p>
+                                        <div
+                                            class="project__description--links"
+                                        >
+                                            <a
+                                                href="https://github.com/nyteksf/H-CA-Script-Installer/"
+                                                target="_blank"
+                                                class="project__description--link"
+                                            >
+                                                <i
+                                                    class="fa-brands fa-github"
+                                                ></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                        <div id="page2" class="project-content-page">
+                            <li class="project">
+                                <div class="project__wrapper">
+                                    <img
+                                        src="./assets/pseudotwitterproj.jpg"
+                                        loading="lazy"
+                                        alt="Project image"
+                                        class="project__img"
+                                    />
+                                    <div class="project__wrapper--bg"></div>
+                                    <div class="project__description">
+                                        <h3 class="project__description--title">
+                                            "PseudoTwitter" Project
+                                        </h3>
+                                        <h4
+                                            class="project__description--sub-title"
+                                        >
+                                            HTML, CSS, JavaScript
+                                        </h4>
+                                        <p class="project__description--para">
+                                            Despite the name "PseudoTwitter", this project was not meant to showcase a polished UI. Instead, the purpose was to display randomized, dynamic element generation alongside DOM manipulation, using a quick and dirty UI to provide context accordingly. All tweets except for user content are randomly generated from a list of options.
+                                        </p>
+                                        <div
+                                            class="project__description--links"
+                                        >
+                                            <a
+                                                href=""
+                                                class="project__description--link"
+                                            >
+                                                <i
+                                                    class="fa-brands fa-github"
+                                                ></i>
+                                            </a>
+                                            <a
+                                                href=""
+                                                class="project__description--link"
+                                            >
+                                                <i class="fa-solid fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="project">
+                                <div class="project__wrapper">
+                                    <img
+                                        src="./assets/reactcounterapp.jpg"
+                                        loading="lazy"
+                                        alt="Project image"
+                                        class="project__img"
+                                    />
+                                    <div class="project__wrapper--bg"></div>
+                                    <div class="project__description">
+                                        <h3 class="project__description--title">
+                                            React Counter App
+                                        </h3>
+                                        <h4
+                                            class="project__description--sub-title"
+                                        >
+                                            HTML, CSS, jQuery, React + JSX
+                                        </h4>
+                                        <p class="project__description--para">
+                                            This is a simple learning project which showcases frontend skills alongside basic React proficiency in regard to state management and use of components.
+                                        </p>
+                                        <div
+                                            class="project__description--links"
+                                        >
+                                            <a
+                                                href="https://jsfiddle.net/nytek/bao9m5yk/"
+                                                target="_blank"
+                                                class="project__description--link"
+                                            >
+                                                <i class="fa-solid fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="project">
+                                <div class="project__wrapper">
+                                    <img
+                                        src="./assets/og-portfolio-layout.jpg"
+                                        loading="lazy"
+                                        alt="Project image"
+                                        class="project__img"
+                                    />
+                                    <div class="project__wrapper--bg"></div>
+                                    <div class="project__description">
+                                        <h3 class="project__description--title">
+                                            Basic E-Portfolio
+                                        </h3>
+                                        <h4
+                                            class="project__description--sub-title"
+                                        >
+                                            HTML, CSS, JavaScript
+                                        </h4>
+                                        <p class="project__description--para">
+                                            This is my original, basic e-portfolio project. It is a layout and highlight of my prior work featuring custom pagination used to thumb between the pages thereof.
+                                        </p>
+                                        <div
+                                            class="project__description--links"
+                                        >
+                                            <a
+                                                href=""
+                                                class="project__description--link"
+                                            >
+                                                <i
+                                                    class="fa-brands fa-github"
+                                                ></i>
+                                            </a>
+                                            <a
+                                                href=""
+                                                class="project__description--link"
+                                            >
+                                                <i class="fa-solid fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="project">
+                                <div class="project__wrapper">
+                                    <img
+                                        src="./assets/livelinksapp.jpg"
+                                        loading="lazy"
+                                        alt="Project image"
+                                        class="project__img"
+                                    />
+                                    <div class="project__wrapper--bg"></div>
+                                    <div class="project__description">
+                                        <h3 class="project__description--title">
+                                            "LiveLinks" Project
+                                        </h3>
+                                        <h4
+                                            class="project__description--sub-title"
+                                        >
+                                            HTML, CSS, JavaScript, NoSQL (Firebase)
+                                        </h4>
+                                        <p class="project__description--para">
+                                            This was a simple project inspired by the Hack Reactor: Fulcrum advanced-JavaScript course. Auth0 is used to register and/or login in order to then be able to post and like shared links from fellow users.
+                                        </p>
+                                        <div
+                                            class="project__description--links"
+                                        >
+                                            <a
+                                                href="https://www.github.com/nyteksf/LiveLinksApp/"
+                                                target="_blank"
+                                                class="project__description--link"
+                                            >
+                                                <i
+                                                    class="fa-brands fa-github"
+                                                ></i>
+                                            </a>
+                                            <a
+                                                href="https://nyteksf.github.io/LiveLinksApp/"
+                                                class="project__description--link"
+                                                target="_blank"
+                                            >
+                                                <i class="fa-solid fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="project">
+                                <div class="project__wrapper">
+                                    <img
+                                        src="./assets/jsdommanipulator.jpg"
+                                        loading="lazy"
+                                        alt="Project image"
+                                        class="project__img"
+                                    />
+                                    <div class="project__wrapper--bg"></div>
+                                    <div class="project__description">
+                                        <h3 class="project__description--title">
+                                            JavaScript DOM Manipulator
+                                        </h3>
+                                        <h4
+                                            class="project__description--sub-title"
+                                        >
+                                            HTML, CSS, JavaScript
+                                        </h4>
+                                        <p class="project__description--para">
+                                            This was a project demonstrating JavaScript powered DOM manipulation. It uses jQuery, jQuery UI (autocomplete), TinyColor.js, Bootstrap and NTC to choose random or selected colors as desired. It also stores the last chosen colors as buttons; allowing them be recalled at will when "Remember Choices" has been selected.
+                                        </p>
+                                        <div
+                                            class="project__description--links"
+                                        >
+                                            <a
+                                                href="https://www.github.com/nyteksf/js-dom-manipulator/"
+                                                target="_blank"
+                                                class="project__description--link"
+                                            >
+                                                <i
+                                                    class="fa-brands fa-github"
+                                                ></i>
+                                            </a>
+                                            <a
+                                                href="https://nyteksf.github.io/js-dom-manipulator/"
+                                                class="project__description--link"
+                                                target="_blank"
+                                            >
+                                                <i class="fa-solid fa-link"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </div>
+                    </ul>
+                    <nav class="pagination__nav">
+                        <ul class="pagination-menu">
+                            <li>
+                                <a href="" class="prev">«</a>
+                            </li>
+                            <li>
+                                <a
+                                    href=""
+                                    class="pagination-menu__item active-page"
+                                    page="1"
+                                    >1</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href=""
+                                    class="pagination-menu__item"
+                                    page="2"
+                                    >2</a
+                                >
+                            </li>
+                            <!--
+                                <li><a href="" class="pagination-menu__item" page="3">3</a></li>
+                                <li><a href="" class="pagination-menu__item" page="4">4</a></li>
+                            -->
+                            <li>
+                                <a href="" class="next">»</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="container">
+                <div class="row footer__row">
+                    <figure>
+                        <img
+                            class="footer__logo--img"
+                            src="./assets/jclogo3-bw.png"
+                            loading="lazy"
+                            alt="Footer logo"
+                        />
+                    </figure>
+                    <div class="footer__social--list">
+                        <a
+                            href="https://www.github.com/nyteksf/"
+                            target="_blank"
+                            class="footer__social--link link__hover-effect link__hover-effect--white footer-link__hover-effect--white"
+                        >
+                            GitHub
+                        </a>
+                        <a
+                            href="https://www.linkedin.com/in/joe-coviello-63a63768/"
+                            target="_blank"
+                            class="footer__social--link link__hover-effect link__hover-effect--white footer-link__hover-effect--white"
+                        >
+                            LinkedIn
+                        </a>
+                        <a
+                            href="#"
+                            class="footer__social--link link__hover-effect link__hover-effect--white footer-link__hover-effect--white" onclick="toggleModal()"
+                        >
+                            Contact
+                        </a>
+                        <a
+                            href="./assets/Joe Coviello - Resume - JR Web Dev.pdf"
+                            target="_blank"
+                            class="footer__social--link link__hover-effect link__hover-effect--white footer-link__hover-effect--white"
+                        >
+                            Resume
+                        </a>
+                    </div>
+                    <div class="footer__copyright">
+                        Copyright &copy; 2024 Joe Coviello
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
